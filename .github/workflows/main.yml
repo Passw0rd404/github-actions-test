@@ -12,3 +12,11 @@ jobs:
     steps:
       - name: print hello
         run: echo "hello"
+        
+      - name: checkout repo
+        uses: action/checkout@5.0.0
+
+      - name: list the repo files
+        run: ls -la
+
+      
