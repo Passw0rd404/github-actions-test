@@ -1,14 +1,7 @@
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: "choose env"
-        required: true
-        default: "staging"
-        type: choice
-        options:
-          - staging
-          - production
+  repository_dispatch:
+    types: [incident_report]
+    
 jobs:
   deploy:
     runs-on: ubuntu-latest
